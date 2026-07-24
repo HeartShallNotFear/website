@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#090909"/>
+  <path d="M110 315h980" stroke="#2d2c29"/>
+  <text x="600" y="288" text-anchor="middle" fill="#f4f2ec"
+        font-family="Georgia, serif" font-size="82" letter-spacing="7">HEART SHALL NOT FEAR</text>
+  <text x="600" y="365" text-anchor="middle" fill="#aaa79f"
+        font-family="Arial, sans-serif" font-size="23" letter-spacing="6">MUSIC BUILT TO LAST</text>
+</svg>
