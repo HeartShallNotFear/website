@@ -49,9 +49,9 @@ window.HSNF_CONFIG = {
       label: "YouTube",
       url: "https://www.youtube.com/@heartshallnotfear"
     },
-    {
+   {
   label: "Facebook",
-  url: "https://www.facebook.com/profile.php?id=61592021907599"
+  url: "https://www.facebook.com/heartshallnotfear"
 }
   ],
 
