@@ -50,9 +50,9 @@ window.HSNF_CONFIG = {
       url: "https://www.youtube.com/@heartshallnotfear"
     },
     {
-      label: "Facebook",
-      url: "https://www.facebook.com/heartshallnotfear"
-    }
+  label: "Facebook",
+  url: "https://www.facebook.com/profile.php?id=61592021907599"
+}
   ],
 
   contactEmail: ""
