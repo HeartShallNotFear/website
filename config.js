@@ -7,22 +7,52 @@
 
 window.HSNF_CONFIG = {
   releaseLinks: [
-    { label: "Pre-save / Listen", url: "" },
-    { label: "YouTube", url: "" }
+    {
+      label: "Pre-save / Listen",
+      url: ""
+    },
+    {
+      label: "YouTube",
+      url: ""
+    }
   ],
 
   artistLinks: [
-    { label: "Instagram", url: "" },
-    { label: "TikTok", url: "" },
-    { label: "YouTube", url: "" },
-    { label: "Facebook", url: "" }
+    {
+      label: "Instagram",
+      url: "https://www.instagram.com/crimineyjay/"
+    },
+    {
+      label: "TikTok",
+      url: "https://www.tiktok.com/@crimineyjay"
+    },
+    {
+      label: "YouTube",
+      url: "https://www.youtube.com/@crimineyjay"
+    },
+    {
+      label: "Facebook",
+      url: "https://www.facebook.com/crimineyjay"
+    }
   ],
 
   labelLinks: [
-    { label: "Instagram", url: "" },
-    { label: "TikTok", url: "" },
-    { label: "YouTube", url: "" },
-    { label: "Facebook", url: "" }
+    {
+      label: "Instagram",
+      url: "https://www.instagram.com/heartshallnotfear/"
+    },
+    {
+      label: "TikTok",
+      url: "https://www.tiktok.com/@heartshallnotfear"
+    },
+    {
+      label: "YouTube",
+      url: "https://www.youtube.com/@heartshallnotfear"
+    },
+    {
+      label: "Facebook",
+      url: "https://www.facebook.com/heartshallnotfear"
+    }
   ],
 
   contactEmail: ""
