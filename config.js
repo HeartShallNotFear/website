@@ -58,10 +58,10 @@ window.HSNF_CONFIG = {
     }
   ],
 
-  devotional: {
-    buttonLabel: "Join on TikTok",
-    url: ""
-  },
+ devotional: {
+  buttonLabel: "Join on TikTok",
+  url: "https://www.tiktok.com/@la.chiiika"
+},
 
   contactEmail: ""
 };
