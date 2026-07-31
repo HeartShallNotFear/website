@@ -5,20 +5,20 @@
 */
 
 window.HSNF_CONFIG = {
-  releaseLinks: [
-    {
-      label: "Spotify",
-      url: "https://open.spotify.com/album/0jDvjlkDoGt2BUfi58hcfh"
-    },
-    {
-      label: "Apple Music",
-      url: "https://music.apple.com/us/album/love-remains/6790094847"
-    },
-    {
-      label: "Amazon Music",
-      url: "https://music.amazon.com/albums/B0H8LDLR4Q?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Dlxcqp8eTZ810E2aaJSDdKYsX"
-    }
-  ],
+ releaseLinks: [
+  {
+    label: "Spotify",
+    url: "https://open.spotify.com/album/0jDvjlkDoGt2BUfi58hcfh"
+  },
+  {
+    label: "Apple Music",
+    url: "https://music.apple.com/us/album/love-remains/6790094847"
+  },
+  {
+    label: "Amazon Music",
+    url: "https://music.amazon.com/albums/B0H8LDLR4Q?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Dlxcqp8eTZ810E2aaJSDdKYsX"
+  }
+],
 
   artistLinks: [
     {
@@ -58,7 +58,7 @@ window.HSNF_CONFIG = {
     }
   ],
 
- devotional: {
+devotional: {
   buttonLabel: "Join on TikTok",
   url: "https://www.tiktok.com/@la.chiiika"
 },
