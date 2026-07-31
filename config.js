@@ -1,19 +1,22 @@
 /*
-  EDIT THIS FILE FIRST.
+  WEBSITE SETTINGS
 
-  Replace each placeholder URL with the actual account link.
-  Leave an entry blank ("") to hide it from the website.
+  Leave a URL blank ("") to hide that button or link.
 */
 
 window.HSNF_CONFIG = {
   releaseLinks: [
     {
-      label: "Pre-save / Listen",
-      url: ""
+      label: "Spotify",
+      url: "https://open.spotify.com/album/0jDvjlkDoGt2BUfi58hcfh"
     },
     {
-      label: "YouTube",
-      url: ""
+      label: "Apple Music",
+      url: "https://music.apple.com/us/album/love-remains/6790094847"
+    },
+    {
+      label: "Amazon Music",
+      url: "https://music.amazon.com/albums/B0H8LDLR4Q?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Dlxcqp8eTZ810E2aaJSDdKYsX"
     }
   ],
 
@@ -49,11 +52,16 @@ window.HSNF_CONFIG = {
       label: "YouTube",
       url: "https://www.youtube.com/@heartshallnotfear"
     },
-   {
-  label: "Facebook",
-  url: "https://www.facebook.com/heartshallnotfear"
-}
+    {
+      label: "Facebook",
+      url: "https://www.facebook.com/heartshallnotfear"
+    }
   ],
+
+  devotional: {
+    buttonLabel: "Join on TikTok",
+    url: ""
+  },
 
   contactEmail: ""
 };

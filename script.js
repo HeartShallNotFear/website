@@ -43,6 +43,18 @@
   appendLinks("artist-socials", config.artistLinks, makeTextLink);
   appendLinks("label-socials", config.labelLinks, makeTextLink);
 
+  const devotionalTarget = document.getElementById("devotional-link");
+  if (devotionalTarget) {
+    const devotional = config.devotional || {};
+    if (devotional.url) {
+      const button = makeButton({
+        label: devotional.buttonLabel || "Join on TikTok",
+        url: devotional.url
+      });
+      if (button) devotionalTarget.appendChild(button);
+    }
+  }
+
   const contact = document.getElementById("contact-link");
   if (contact) {
     if (config.contactEmail) {
