@@ -59,7 +59,7 @@ window.HSNF_CONFIG = {
   ],
 
 devotional: {
-  buttonLabel: "Join on TikTok",
+  buttonLabel: "Follow Elizabeth on TikTok",
   url: "https://www.tiktok.com/@la.chiiika"
 },
 
