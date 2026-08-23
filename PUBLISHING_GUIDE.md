@@ -7,16 +7,22 @@
 - Existing Namecheap domain: already owned
 - Website-builder subscription: none
 
-## Part 1 — Create a GitHub account
+## Current deployment
 
-1. Go to GitHub and create an account, or sign in.
-2. Record your exact GitHub username. You will need it for Namecheap DNS.
+- Account: `HeartShallNotFear`
+- Repository: `website`
+- Branch: `main`
+- Public site: `https://heartshallnotfear.com`
+- Hosting: GitHub Pages
+- DNS: Namecheap BasicDNS
 
-## Part 2 — Create the website repository
+The initial setup below is retained as a recovery reference. Do not create a second repository for routine updates.
+
+## Part 1 — Repository recovery
 
 1. From GitHub, click the **+** menu in the upper-right.
 2. Choose **New repository**.
-3. Repository name: `heartshallnotfear`
+3. Repository name: `website`
 4. Set visibility to **Public**.
 5. Do not add a README, `.gitignore`, or license because this package already includes files.
 6. Click **Create repository**.
@@ -52,7 +58,7 @@ The repository root must visibly contain:
 4. Click **Save**.
 5. Wait a few minutes.
 6. GitHub will display a temporary address similar to:
-   `https://YOUR-USERNAME.github.io/heartshallnotfear/`
+   `https://heartshallnotfear.github.io/website/`
 
 ## Part 5 — Add the custom domain in GitHub first
 
@@ -89,12 +95,10 @@ The included `CNAME` file already contains the same domain.
 
 | Type | Host | Value | TTL |
 |---|---|---|---|
-| CNAME Record | www | YOUR-USERNAME.github.io | Automatic |
-
-Replace `YOUR-USERNAME` with your exact GitHub username.
+| CNAME Record | www | heartshallnotfear.github.io | Automatic |
 
 Do not include `https://`.
-Do not include `/heartshallnotfear`.
+Do not include `/website`.
 Do not add a trailing slash.
 
 8. Save all changes.
@@ -116,7 +120,7 @@ Test both:
 
 Also test the site on a phone.
 
-## Updating the website later
+## Updating and synchronizing the website
 
 For a simple text or link update:
 
@@ -131,7 +135,7 @@ For image replacement:
 2. Delete the old image.
 3. Upload the replacement using the same filename.
 
-GitHub Pages normally republishes automatically after a commit.
+GitHub Pages normally republishes automatically after a commit. After verifying the deployed site, synchronize the exact current source into iCloud at `01 - Business/Website/Current Website Source`, excluding `.git` and secrets. Do not update from Version 1, loose root files, or the safe-merged version 2 package.
 
 ## Important security step
 

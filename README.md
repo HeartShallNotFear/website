@@ -1,35 +1,41 @@
-# Heart Shall Not Fear — Website Version 1
+# Heart Shall Not Fear — Current Website Source
 
-This folder is a complete static website prepared for GitHub Pages.
+This repository is the deployed source for `heartshallnotfear.com`, hosted on GitHub Pages.
 
-## Fastest edit checklist
+## Current operating facts
 
-1. Open `config.js`.
-2. Paste the real social-media links and contact email.
-3. Replace `assets/love-remains-placeholder.svg` with the final album artwork.
-4. Replace `assets/crimineyjay-placeholder.svg` with the artist photograph.
-5. Upload the files to a public GitHub repository.
-6. Enable GitHub Pages.
-7. Connect `heartshallnotfear.com` through Namecheap.
+- Repository: `https://github.com/HeartShallNotFear/website`
+- Branch: `main`
+- Domain: `heartshallnotfear.com`
+- Operator: Chris
+- iCloud operational mirror: `01 - Business/Website/Current Website Source`
 
-The website works immediately with the included placeholders.
+Always begin with the latest `main` branch. After a deployed update is verified, synchronize the current source into the iCloud operational mirror. Older website packages are historical and must not be used as the next editing source.
 
-## Replacing images
+## Editing
 
-You can use JPG, PNG, WebP, or SVG files.
+1. Pull or clone the latest `main` branch.
+2. Make the smallest approved change.
+3. Verify links, responsive layout, keyboard use, and page behavior.
+4. Commit and push.
+5. Confirm the public site updated.
+6. Synchronize the iCloud current-source mirror and record the deployed commit.
 
-For easiest replacement, keep the existing filenames:
+Do not store passwords, API keys, registrar data, or private email destinations in this repository.
 
-- `assets/love-remains-placeholder.svg`
-- `assets/crimineyjay-placeholder.svg`
+## Identity assets
 
-Or change the `src` paths in `index.html`.
+- `assets/hsnf-wordmark.svg` — standalone derivative of the approved live header wordmark
+- `assets/hsnf-favicon.svg` — small-format derivative
+- `assets/hsnf-social-card.svg` — social-preview derivative
+
+Files with `placeholder` in their name are retained historical assets and are not current authority.
 
 ## Main files
 
 - `index.html` — website content
 - `styles.css` — appearance and mobile layout
-- `config.js` — social links, release links, and contact email
+- `config.js` — social, release, ministry, and interim-contact links
 - `script.js` — menu and link rendering
 - `CNAME` — custom domain for GitHub Pages
-- `PUBLISHING_GUIDE.md` — exact publishing steps
+- `PUBLISHING_GUIDE.md` — current deployment and synchronization reference

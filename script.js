@@ -62,10 +62,13 @@
       a.href = `mailto:${config.contactEmail}`;
       a.textContent = config.contactEmail;
       contact.appendChild(a);
+    } else if (config.contactLink && config.contactLink.url) {
+      const a = makeTextLink(config.contactLink);
+      if (a) contact.appendChild(a);
     } else {
       const span = document.createElement("span");
       span.className = "small-copy";
-      span.textContent = "Contact email coming soon.";
+      span.textContent = "Contact through the label social channels.";
       contact.appendChild(span);
     }
   }

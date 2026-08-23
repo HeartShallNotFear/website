@@ -17,6 +17,10 @@ window.HSNF_CONFIG = {
   {
     label: "Amazon Music",
     url: "https://music.amazon.com/albums/B0H8LDLR4Q?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_Dlxcqp8eTZ810E2aaJSDdKYsX"
+  },
+  {
+    label: "YouTube Music",
+    url: "https://music.youtube.com/playlist?list=OLAK5uy_kysb9xSiXUQXl8clwmC-v6tA_43u00HcM"
   }
 ],
 
@@ -32,6 +36,10 @@ window.HSNF_CONFIG = {
     {
       label: "YouTube",
       url: "https://www.youtube.com/@crimineyjay"
+    },
+    {
+      label: "YouTube Music",
+      url: "https://music.youtube.com/channel/UCSYGbPkEy0v9vcFLUPX43-Q"
     },
     {
       label: "Facebook",
@@ -63,5 +71,9 @@ devotional: {
   url: "https://www.tiktok.com/@la.chiiika"
 },
 
-  contactEmail: ""
+  contactEmail: "",
+  contactLink: {
+    label: "Message HSNF on Instagram",
+    url: "https://www.instagram.com/heartshallnotfear/"
+  }
 };
