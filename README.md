@@ -25,9 +25,10 @@ Do not store passwords, API keys, registrar data, or private email destinations 
 
 ## Identity assets
 
+- `assets/hsnf-social-logo-2026-09-28.png` is the founder-approved social logo, shown in the homepage opening and used for social previews. The deployed file preserves the approved source PNG unchanged.
 - `assets/hsnf-wordmark.svg` — standalone derivative of the approved live header wordmark
 - `assets/hsnf-favicon.svg` — small-format derivative
-- `assets/hsnf-social-card.svg` — social-preview derivative
+- `assets/hsnf-social-card.svg` — prior social-preview derivative, retained as history and no longer referenced by the page
 
 Files with `placeholder` in their name are retained historical assets and are not current authority.
 

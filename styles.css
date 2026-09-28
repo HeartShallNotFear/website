@@ -107,6 +107,28 @@ a {
   justify-content: center;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, .75fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(3.75rem, 8vw, 7.3rem);
+}
+
+.hero-logo-frame {
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.hero-logo-frame img {
+  width: 100%;
+  height: auto;
+}
+
 .hero-rule {
   width: 88px;
   height: 1px;
@@ -258,6 +280,17 @@ h2 {
   font-size: .73rem;
 }
 
+.award-note {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.award-note .release-date {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 
 .devotional-grid {
   display: grid;
@@ -295,6 +328,11 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 7vw, 7rem);
+}
+
+.about-copy {
+  max-width: 850px;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
 }
 
 .values {
@@ -404,6 +442,15 @@ h2 {
   .about-grid,
   .connect-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-logo-frame {
+    width: min(70vw, 320px);
+    margin: 2rem auto 0;
   }
 
   .devotional-poster {
