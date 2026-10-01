@@ -93,6 +93,29 @@ a {
   padding: .55rem .75rem;
 }
 
+.ballot-alert {
+  width: min(calc(100% - 2rem), var(--max));
+  margin: 1rem auto 0;
+  padding: .9rem 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem 1.25rem;
+  border: 1px solid var(--accent);
+  background: var(--surface-2);
+  font-size: .9rem;
+}
+
+.ballot-alert p {
+  flex: 1 1 490px;
+  margin: 0;
+}
+
+.ballot-alert a {
+  white-space: nowrap;
+  text-underline-offset: .22em;
+}
+
 .section {
   width: min(calc(100% - 2rem), var(--max));
   margin: 0 auto;
@@ -289,6 +312,35 @@ h2 {
 .award-note .release-date {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.award-note h3 {
+  margin: 0 0 1.35rem;
+  max-width: 24ch;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.award-list {
+  display: grid;
+  gap: .7rem;
+  margin: 0 0 1.4rem;
+}
+
+.award-list p {
+  display: grid;
+  gap: .2rem;
+  margin: 0;
+  padding: .85rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+}
+
+.award-list span {
+  color: var(--muted);
+  font-size: .9rem;
 }
 
 

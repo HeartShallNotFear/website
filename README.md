@@ -40,3 +40,7 @@ Files with `placeholder` in their name are retained historical assets and are no
 - `script.js` — menu and link rendering
 - `CNAME` — custom domain for GitHub Pages
 - `PUBLISHING_GUIDE.md` — current deployment and synchronization reference
+
+## October 1, 2026 ballot update
+
+The artist section identifies “Then Is Loud” as a finalist for Best AI Jazz Song and “You Have the Final Word” as a finalist for Best AI Gospel Song on the official 2026 SIQA AI Music Awards ballot. The public wording distinguishes ballot finalists from the official nominees selected from the top five entries in each category. The temporary ballot button points to `https://registry.thesiqa.com/vote` and the displayed voting deadline is October 3, 2026 at 11:59 p.m. Pacific.
