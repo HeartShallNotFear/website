@@ -5,6 +5,11 @@
 */
 
 window.HSNF_CONFIG = {
+  // Public analytics site code, never an API token or account credential.
+  analytics: {
+    enabled: true,
+    siteCode: "heartshallnotfear"
+  },
  releaseLinks: [
   {
     label: "Spotify",

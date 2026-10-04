@@ -137,6 +137,16 @@ For image replacement:
 
 GitHub Pages normally republishes automatically after a commit. After verifying the deployed site, synchronize the exact current source into iCloud at `01 - Business/Website/Current Website Source`, excluding `.git` and secrets. Do not update from Version 1, loose root files, or the safe-merged version 2 package.
 
+## Analytics activation and verification
+
+The October 3 analytics integration uses the public site code `heartshallnotfear` at https://heartshallnotfear.goatcounter.com. See the private Website operational records for the deployed SHA and provider-side verification.
+
+Keep the dashboard private, aggregate collection on, sessions on and individual pageviews off. The account's retention setting was verified as `0` (no automatic deletion). Account email verification is maintained through the provider's email flow. Local Codex tests the integration and pushes narrowly scoped website changes through the normal authenticated route. No DNS migration is needed.
+
+After deployment, compare production `index.html`, `config.js` and `analytics.js` to the pinned commit. Confirm the integrity-checked provider script loads, a controlled visible visit reaches the correct dashboard and one outbound event is accepted once. Check the browser console and network for errors. Confirm preserved menu behavior, images, SEO metadata and social previews on desktop and mobile. Treat simulated requests as development evidence only.
+
+Archive an aggregate JSON export after verification and after a promotion ends. See the README for metric definitions, privacy choices and campaign conventions. Do not change live ads or spend funds merely to add tags. Record provider verification and deployed SHA in the existing Website operational records. Only then synchronize `Current Website Source`; keep blocked preparation in a clearly labeled Pending directory.
+
 ## Important security step
 
 After the website is working, GitHub recommends verifying your domain in your GitHub account's Pages settings. This protects the domain from being claimed by another GitHub Pages repository. GitHub will provide a TXT record that you add in Namecheap.
