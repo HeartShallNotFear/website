@@ -278,7 +278,7 @@ h2 {
 }
 
 .portrait-frame {
-  aspect-ratio: 1;
+  aspect-ratio: 3 / 4;
 }
 
 .release-copy,
@@ -302,6 +302,29 @@ h2 {
   letter-spacing: .14em;
   font-size: .73rem;
 }
+
+.mr-now-intro {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.mr-now-intro img { width: 180px; flex-shrink: 0; height: auto; }
+.mr-now-intro p { max-width: 55ch; margin: 0; }
+@media (max-width: 500px) {
+  .mr-now-intro { flex-direction: column; align-items: flex-start; }
+}
+
+.mr-now-tracklist {
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+  color: var(--muted);
+}
+
+.mr-now-tracklist summary { cursor: pointer; color: var(--text); }
+.mr-now-tracklist ol { padding-left: 1.5rem; }
+.mr-now-tracklist li { padding: .15rem 0; }
 
 .award-note {
   border-top: 1px solid var(--line);

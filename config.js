@@ -5,6 +5,11 @@
 */
 
 window.HSNF_CONFIG = {
+  mrNow: {
+    hyperFollow: "https://distrokid.com/hyperfollow/mrnow1/remastered-reinvented",
+    recklessVideo: "https://youtu.be/h9DU2gDHVaE",
+    siqaProfile: "https://registry.thesiqa.com/artists/mr-now"
+  },
   // Public analytics site code, never an API token or account credential.
   analytics: {
     enabled: true,
