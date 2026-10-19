@@ -24,7 +24,7 @@
 
   const appendLinks = (id, links, factory) => {
     const target = document.getElementById(id);
-    if (!target) return;
+    if (!target || target.children.length) return;
     (links || []).forEach((link) => {
       const element = factory(link);
       if (element) target.appendChild(element);
