@@ -1,3 +1,4 @@
+/usr/local/Homebrew/Library/Homebrew/cmd/shellenv.sh: line 27: /bin/ps: Operation not permitted
 (() => {
   "use strict";
 
@@ -53,7 +54,9 @@
   }
   addDestination("https://registry.thesiqa.com/vote", "aima-ballot", "SIQA AIMA ballot");
   if (config.mrNow) {
-    if (config.mrNow.hyperFollow) addDestination(config.mrNow.hyperFollow, "mr-now-hyperfollow", "Mr Now: album pre-save and release updates");
+    (config.mrNow.streamingLinks || []).forEach(({ label, url }) => {
+      if (label && url) addDestination(url, `mr-now-stream-${slug(label)}`, `Mr Now: ${label}`);
+    });
     if (config.mrNow.recklessVideo) addDestination(config.mrNow.recklessVideo, "mr-now-reckless-youtube", "Mr Now: Reckless on YouTube");
     if (config.mrNow.siqaProfile) addDestination(config.mrNow.siqaProfile, "mr-now-siqa-profile", "Mr Now: SIQA profile");
   }

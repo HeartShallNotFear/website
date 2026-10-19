@@ -1,3 +1,4 @@
+/usr/local/Homebrew/Library/Homebrew/cmd/shellenv.sh: line 27: /bin/ps: Operation not permitted
 (() => {
   const config = window.HSNF_CONFIG || {};
 
@@ -39,6 +40,7 @@
   };
 
   appendLinks("release-links", config.releaseLinks, makeButton);
+  appendLinks("mr-now-links", config.mrNow && config.mrNow.streamingLinks, makeButton);
   appendLinks("artist-links", config.artistLinks, makeButton);
   appendLinks("artist-socials", config.artistLinks, makeTextLink);
   appendLinks("label-socials", config.labelLinks, makeTextLink);

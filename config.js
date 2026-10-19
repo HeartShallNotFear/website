@@ -1,3 +1,4 @@
+/usr/local/Homebrew/Library/Homebrew/cmd/shellenv.sh: line 27: /bin/ps: Operation not permitted
 /*
   WEBSITE SETTINGS
 
@@ -6,7 +7,20 @@
 
 window.HSNF_CONFIG = {
   mrNow: {
-    hyperFollow: "https://distrokid.com/hyperfollow/mrnow1/remastered-reinvented",
+    streamingLinks: [
+      {
+        label: "Spotify",
+        url: "https://open.spotify.com/album/3C42pKI03yCKorp6E2WyoE"
+      },
+      {
+        label: "Apple Music",
+        url: "https://music.apple.com/us/album/remastered-reinvented/6822891496"
+      },
+      {
+        label: "YouTube Music",
+        url: "https://music.youtube.com/browse/MPREb_aiKlxy5X3RX"
+      }
+    ],
     recklessVideo: "https://youtu.be/h9DU2gDHVaE",
     siqaProfile: "https://registry.thesiqa.com/artists/mr-now"
   },
