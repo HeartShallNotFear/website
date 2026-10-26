@@ -31,16 +31,19 @@
   };
 
   const destinations = new Map();
-  const addDestination = (url, event, title) => {
+  const addDestination = (url, event, title, details = {}) => {
     try {
-      destinations.set(new URL(url, location.href).href, { path: event, title, event: true });
+      destinations.set(new URL(url, location.href).href, { path: event, title, event: true, ...details });
     } catch (_) {
       // A malformed optional link must not interrupt the page.
     }
   };
   const slug = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   (config.releaseLinks || []).forEach(({ label, url }) => {
-    if (label && url) addDestination(url, `listen-love-remains-${slug(label)}`, `Love Remains: ${label}`);
+    if (label && url) addDestination(url, `love-remains-stream-${slug(label)}`, `Love Remains: ${label}`, {
+      streamGroup: "love-remains",
+      service: slug(label)
+    });
   });
   (config.artistLinks || []).forEach(({ label, url }) => {
     if (label && url) addDestination(url, `artist-${slug(label)}`, `CrimineyJay: ${label}`);
@@ -51,10 +54,12 @@
   if (config.devotional && config.devotional.url) {
     addDestination(config.devotional.url, "elizabeth-devotional", "Elizabeth devotional ministry");
   }
-  addDestination("https://registry.thesiqa.com/vote", "aima-ballot", "SIQA AIMA ballot");
   if (config.mrNow) {
     (config.mrNow.streamingLinks || []).forEach(({ label, url }) => {
-      if (label && url) addDestination(url, `mr-now-stream-${slug(label)}`, `Mr Now: ${label}`);
+      if (label && url) addDestination(url, `mr-now-stream-${slug(label)}`, `Mr Now: ${label}`, {
+        streamGroup: "mr-now",
+        service: slug(label)
+      });
     });
     if (config.mrNow.recklessVideo) addDestination(config.mrNow.recklessVideo, "mr-now-reckless-youtube", "Mr Now: Reckless on YouTube");
     if (config.mrNow.siqaProfile) addDestination(config.mrNow.siqaProfile, "mr-now-siqa-profile", "Mr Now: SIQA profile");
@@ -67,6 +72,76 @@
     path: () => location.pathname,
     referrer: safeReferrer
   };
+
+  let counterReady = false;
+  const pendingCounts = [];
+  const send = (vars) => {
+    if (!counterReady) {
+      pendingCounts.push(vars || {});
+      return;
+    }
+    try { counter.count(vars); } catch (_) { /* Analytics must never block navigation. */ }
+  };
+
+  const route = location.pathname.replace(/\/+$/, "") || "/";
+  const streamRoutes = {
+    "mr-now": "/mr-now/remastered-reinvented",
+    "love-remains": "/crimineyjay/love-remains"
+  };
+  const clickHandler = (event) => {
+    if (event.defaultPrevented) return;
+    const link = event.target.closest && event.target.closest("a[href]");
+    if (!link) return;
+
+    const declaredPath = link.dataset && link.dataset.hsnfEvent;
+    let measurement;
+    if (declaredPath && /^[a-z0-9][a-z0-9_-]{1,79}$/i.test(declaredPath)) {
+      measurement = {
+        path: declaredPath,
+        title: (link.dataset.hsnfTitle || link.textContent || "").trim(),
+        event: true
+      };
+    } else {
+      measurement = destinations.get(link.href);
+    }
+
+    if (measurement && measurement.streamGroup) {
+      const surface = route === streamRoutes[measurement.streamGroup]
+        ? "album"
+        : (route === "/" || route === "/index.html" ? "home" : "other");
+      measurement = {
+        path: `${measurement.streamGroup}-${surface}-stream-${measurement.service}`,
+        title: `${measurement.streamGroup === "mr-now" ? "Mr Now" : "Love Remains"} ${surface} streaming click: ${measurement.service}`,
+        event: true
+      };
+    }
+
+    if (link.closest("#contact-link") && (link.href === contactDestination || link.href.startsWith("mailto:"))) {
+      measurement = { path: "contact", title: "Contact HSNF", event: true };
+    }
+
+    if (!measurement) return;
+
+    // Carry only the already-validated public campaign labels into an internal
+    // landing page so its visit and later service click keep the same attribution.
+    if (measurement.path.startsWith("home-open-") && campaignQuery.toString()) {
+      try {
+        const target = new URL(link.href, location.href);
+        if (target.origin === location.origin && target.pathname !== location.pathname) {
+          campaignQuery.forEach((value, key) => {
+            if (!target.searchParams.has(key)) target.searchParams.set(key, value);
+          });
+          link.href = target.href;
+        }
+      } catch (_) {
+        // Leave the original destination unchanged if it cannot be parsed.
+      }
+    }
+
+    send(measurement);
+  };
+  document.addEventListener("click", clickHandler);
+
   const provider = document.createElement("script");
   provider.async = true;
   provider.src = "https://gc.zgo.at/count.v5.js";
@@ -86,9 +161,10 @@
       if (vars.event) data.ns = true;
       return data;
     };
-    const send = (vars) => {
+    counterReady = true;
+    pendingCounts.splice(0).forEach((vars) => {
       try { counter.count(vars); } catch (_) { /* Analytics must never block navigation. */ }
-    };
+    });
     let pageCounted = false;
     const countVisiblePage = () => {
       if (pageCounted || (document.visibilityState && document.visibilityState !== "visible")) return;
@@ -98,18 +174,6 @@
     };
     document.addEventListener("visibilitychange", countVisiblePage);
     countVisiblePage();
-
-    // Delegation covers links rendered by script.js without binding duplicates.
-    document.addEventListener("click", (event) => {
-      if (event.defaultPrevented) return;
-      const link = event.target.closest && event.target.closest("a[href]");
-      if (!link) return;
-      let measurement = destinations.get(link.href);
-      if (link.closest("#contact-link") && (link.href === contactDestination || link.href.startsWith("mailto:"))) {
-        measurement = { path: "contact", title: "Contact HSNF", event: true };
-      }
-      if (measurement) send(measurement);
-    });
   });
   document.head.appendChild(provider);
 })();
