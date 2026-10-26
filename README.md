@@ -35,15 +35,17 @@ Files with `placeholder` in their name are retained historical assets and are no
 ## Main files
 
 - `index.html` — website content
+- `mr-now/remastered-reinvented/index.html` — dedicated Mr Now album and streaming page
+- `crimineyjay/love-remains/index.html` — dedicated Love Remains album and streaming page
 - `styles.css` — appearance and mobile layout
 - `config.js` — social, release, ministry, and interim-contact links
 - `script.js` — menu and link rendering
 - `CNAME` — custom domain for GitHub Pages
 - `PUBLISHING_GUIDE.md` — current deployment and synchronization reference
 
-## October 1, 2026 ballot update
+## Current artist honors
 
-The artist section identifies “Then Is Loud” as a finalist for Best AI Jazz Song and “You Have the Final Word” as a finalist for Best AI Gospel Song on the official 2026 SIQA AI Music Awards ballot. The public wording distinguishes ballot finalists from the official nominees selected from the top five entries in each category. The temporary ballot button points to `https://registry.thesiqa.com/vote` and the displayed voting deadline is October 3, 2026 at 11:59 p.m. Pacific.
+CrimineyJay’s profile identifies “Then Is Loud” as a finalist for Best AI Jazz Song and “You Have the Final Word” as a finalist for Best AI Gospel Song at the 2026 SIQA AI Music Awards. The voting period is over. The site has no active ballot link or voting deadline.
 
 ## Website analytics
 
@@ -53,13 +55,15 @@ GoatCounter hosted analytics is selected for this static GitHub Pages site. It i
 
 Collection uses aggregate records. Provider settings were verified with individual pageviews disabled, sessions enabled and dashboard access limited to logged-in users. Data retention is `0`, which the provider defines as no automatic deletion. The reviewed public terms do not promise perpetual service availability, so retain dated aggregate JSON exports after campaigns and during routine website maintenance. CSV export requires individual pageview storage and is not the selected archival route.
 
-The integration measures visits to page paths plus outbound ballot, release-service, artist-social, label-social, ministry and contact events. Events count each click and are separate from visits. GoatCounter visits are deduplicated within its approximately eight-hour session window; these are not exact counts of different people or every page reload. This is one HTML page, so its sections and fragment links are not separate landing pages. A ballot click does not demonstrate eligibility or a completed vote. A music-service click does not demonstrate a stream.
+The integration measures visits to page paths plus outbound release-service, artist-social, label-social, ministry and contact events. The album pages are separately counted routes: `/mr-now/remastered-reinvented/` and `/crimineyjay/love-remains/`. Homepage sections and fragment links remain one homepage route. Events count clicks and are separate from visits. GoatCounter visits are deduplicated within its approximately eight-hour session window; these are not exact counts of different people or every page reload. Each current streaming button has its own event: `mr-now-stream-spotify`, `mr-now-stream-apple-music`, `mr-now-stream-youtube-music`, `listen-love-remains-spotify`, `listen-love-remains-apple-music`, `listen-love-remains-amazon-music` and `listen-love-remains-youtube-music`. Elizabeth’s TikTok devotional button is `elizabeth-devotional`. A music-service click does not demonstrate a stream and a devotional link click does not demonstrate a view.
 
 Privacy: no advertising pixel, cookies or custom persistent browser identifiers are added. DNT and GPC exclude collection. Referrers are reduced to origins. Only validated `utm_campaign` and `utm_source` values are sent; arbitrary query parameters, ad click IDs and fragments are discarded. The provider may derive aggregate country/region, browser, operating system and screen-width statistics. JavaScript blockers and privacy exclusions cause undercounting. Provider processing is described at https://www.goatcounter.com/help/privacy.
 
 Campaign convention for future approved links:
 
-`https://heartshallnotfear.com/?utm_campaign=aima-2026&utm_source=tiktok-paid#artist`
+`https://heartshallnotfear.com/mr-now/remastered-reinvented/?utm_campaign=mr-now-release&utm_source=tiktok-paid`
+
+For Love Remains, use `https://heartshallnotfear.com/crimineyjay/love-remains/` as the campaign destination. The homepage remains the general HSNF overview.
 
 Use lowercase hyphenated public labels. Sources include `instagram-paid`, `instagram-organic`, `facebook-paid`, `facebook-organic`, `tiktok-paid`, `tiktok-organic` and `youtube-organic`. Future campaigns can use `fire-video-2026` or an approved release slug. Never put names, email addresses or account IDs in labels. `utm_medium` and `utm_content` are not separately collected by this implementation. Existing live advertisements and post links are not changed by adding analytics; untagged visits rely on available referrers and cannot be attributed retroactively.
 
